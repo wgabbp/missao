@@ -10,24 +10,38 @@ const perguntas = [
         alternativas: [
             {
                 texto: "sim!",
-                afirmacao: "que maravilha! "
+                afirmacao: [
+                    "que maravilha! ",
+                    ""
+                ]
             },
             {
-                texto: "Isso é maravilhoso!",
-                afirmacao: "Quis saber como usar IA no seu dia a dia."
+                texto: "não!",
+                afirmacao: [
+                     "que bom.",
+                     ""
+                ]
             }
         ]
+
+
     },
     {
         enunciado: "Prefere estileto ou quadrada?",
         alternativas: [
             {
                 texto: "Estileto"
-                afirmacao: "esse modelo é maravilhoso"
+                afirmacao:[ 
+                    "esse modelo é maravilhoso",
+                    ""
+                ]
             },
             {
                 texto: "Quadrada",
-                afirmacao: "É a minha preferida!."
+                afirmacao:[
+                     "É a minha preferida!.",
+                     ""
+                ]
             }
         ]
     },
@@ -36,11 +50,17 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Decorada",
-                afirmacao: "É muito linda!"
+                afirmacao:[
+                     "É muito linda!",
+                     ""
+                ]
             },
             {
                 texto: "Simples",
-                afirmacao: "O básico sempre funciona"
+                afirmacao: [
+                    "O básico sempre funciona",
+                    ""
+                ]
             }
         ]
     },
@@ -49,11 +69,17 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Azul"
-                afirmacao:"É muito elegante",
+                afirmacao:[
+                    "É muito elegante",
+                    ""
+                ]
             },
             {
                 texto: "Vermelho",
-                afirmacao:" Bonita e Chamativa!"
+                afirmacao:[
+                    " Bonita e Chamativa!",
+                    ""
+                ]
             }
         ]
     },
@@ -62,11 +88,17 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Alongamento",
-                afirmacao: "Uma forma de ajudar a manter a unhas bonitas para quem não consegue."
+                afirmacao: [
+                    "Uma forma de ajudar a manter a unhas bonitas para quem não consegue.",
+                    ""
+                ]
             },
             {
                 texto: "Banho de gel",
-                afirmacao: "Uma forma de ajudar a sua unha a crescer saudável e naturalmente. "
+                afirmacao:[
+                     "Uma forma de ajudar a sua unha a crescer saudável e naturalmente. ",
+                     ""
+                ]
             }
         ]
     },
