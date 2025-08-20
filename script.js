@@ -6,24 +6,30 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Você usa unhas postiças?",
+        enunciado: "No mundo atual, muitas mulheres estão optando por fazer curso de manicure, devido a alta procura pelo serviço, e o valor recebido.Para um banho de gel o valor varia de R$65 a 90, Já para um alongamento R$150 a 200.Você usa unhas postiças?",
         alternativas: [
             {
-                texto: "sim!",
+                texto: "sim!!",
                 afirmacao: [
                     "que maravilha! ",
                     ""
                 ]
             },
             {
-                texto: "não!",
+                texto: "não, mas pretendo",
                 afirmacao: [
-                     "que bom.",
+                     "Não vai se arrepender!.",
                      ""
                 ]
             }
         ]
-
+]
+            },
+            {
+                texto: "não, e não tenho interesse",
+                afirmacao: [
+                     "ah, sim, que bom.",
+                     ""
 
     },
     {
@@ -143,3 +149,4 @@ function mostraResultado() {
 }
 
 mostraPergunta();
+
