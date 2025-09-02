@@ -1,4 +1,6 @@
 import {aleatorio, nome} from './aleatorio.js';
+const botaoIniciar = document.querySelector(".iniciar-btn");
+const telaInicial = document.querySelector(".tela-inicial");   telaInicial.style.display = 'none';
 const caixaPrincipal = document.querySelector(".caixa-principal");
 const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
@@ -139,7 +141,11 @@ function mostraAlternativas(){
 function respostaSelecionada(opcaoSelecionada) {
         const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
     historiaFinal += afirmacoes + " ";
-    atual++;
+     if (opcaoSelecionada.proxima != undefined) {
+   } else {
+        mostraResultado();
+        return;
+    }
     mostraPergunta();
 }
 
@@ -172,4 +178,13 @@ function substituiNome(){
     for(const pergunta of perguntas){
         pergunta.enunciado = pergunta.enunciado.replace(/você/g, nome);
     }
+}
+   function iniciaJogo() {
+        atual = 0;
+        historiaFinal = "";
+        telaInicial.style.display = 'none';
+        caixaPerguntas.classList.remove("mostrar");
+        caixaAlternativas.classList.remove("mostrar");
+        caixaResultado.classList.remove("mostrar");
+        mostraPergunta();
 }
