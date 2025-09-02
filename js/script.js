@@ -1,9 +1,10 @@
+import {aleatorio, nome} from './aleatorio.js';
 const caixaPrincipal = document.querySelector(".caixa-principal");
 const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
-
+const botaoJogarNovamente = document.querySelector(".novamente-btn");
 const perguntas = [
     {
         enunciado: "No mundo atual, muitas mulheres estão optando por fazer curso de manicure, devido a alta procura pelo serviço, e o valor recebido.Para um banho de gel o valor varia de R$65 a 90, Já para um alongamento R$150 a 200.Você usa unhas postiças?",
@@ -143,9 +144,11 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2049...";
+   caixaPerguntas.textContent = `Em 2049, ${nome}`;
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
+     caixaResultado.classList.add("mostrar");
+     botaoJogarNovamente.addEventListener("click", jogaNovamente());
 }
 function aleatorio(lista) {
     const posicao = Math.floor(Math.random()* lista.length);
@@ -156,4 +159,17 @@ mostraPergunta();
 function aleatorio(lista) {
         const posicao = Math.random()* lista.length;
           return lista[posicao];
+          substituiNome();
+
+}
+function jogaNovamente(){
+        atual = 0;
+        historiaFinal = "";
+        caixaResultado.classList.remove("mostrar");
+        mostraPergunta();
+}
+function substituiNome(){
+    for(const pergunta of perguntas){
+        pergunta.enunciado = pergunta.enunciado.replace(/você/g, nome);
+    }
 }
